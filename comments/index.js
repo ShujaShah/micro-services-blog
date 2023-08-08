@@ -42,7 +42,7 @@ app.post("/posts/:id/comments", async (req, res) => {
 
 //code to receive an event
 app.post("/events", (req, res) => {
-  console.log("Received Event", req.body.type);
+  console.log("Received Event:", req.body.type);
   res.status({});
 });
 
