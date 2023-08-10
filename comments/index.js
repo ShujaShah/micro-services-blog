@@ -30,7 +30,7 @@ app.post("/posts/:id/comments", async (req, res) => {
   });
   commentsByPostId[req.params.id] = comments;
 
-  //send an event to event bus
+  //send an event to event bus of comment creation
   await axios.post("http://localhost:4005/events", {
     type: "CommentCreated",
     data: {
@@ -45,8 +45,31 @@ app.post("/posts/:id/comments", async (req, res) => {
 });
 
 //code to receive an event
-app.post("/events", (req, res) => {
+app.post("/events", async (req, res) => {
   console.log("Received Event:", req.body.type);
+
+  const { type, data } = req.body;
+
+  //check to see if the comment is moderated
+  if (type === "CommentModerated") {
+    //find the comment and update its status
+    const { postId, id, status, content } = data;
+    const comments = commentsByPostId[postId];
+    const comment = comments.find((comment) => {
+      return comment.id === id;
+    });
+    comment.status = status;
+
+    await axios.post("http://localhost:4005", {
+      type: "CommentUpdated",
+      data: {
+        id,
+        status,
+        postId,
+        content,
+      },
+    });
+  }
   res.status({});
 });
 
