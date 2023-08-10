@@ -8,15 +8,15 @@ app.use(bodyParser.json());
 //listen to the incoming events
 app.post("/events", (req, res) => {
   const event = req.body;
-  // Event Emit For Posts
+  // Incoming event sent to posts
   axios.post("http://localhost:4000/events", event).catch((err) => {
     console.log(err.message);
   });
-  //Emit Event For Comments
+  //Incomming event sent to comments
   axios.post("http://localhost:4001/events", event).catch((err) => {
     console.log(err.message);
   });
-  //Emit Event For Query Service
+  //Incomming event sent to query service
   axios.post("http://localhost:4002/events", event).catch((err) => {
     console.log(err.message);
   });
