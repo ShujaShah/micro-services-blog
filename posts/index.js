@@ -45,5 +45,6 @@ app.post("/events", (req, res) => {
 });
 
 app.listen(4000, () => {
+  console.log("Just a test to build docker image");
   console.log("App is listening on Port 4000 😊");
 });
