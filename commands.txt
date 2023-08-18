@@ -13,8 +13,15 @@
 
 #Check all the pods: 
         kubectl get pods
-#Check all the services
+
+#Check all the services:
         kubectl get services
+
+#Delete the pod:
+        kubectl delete pod_name
+        
+#Delete the service:
+        kubectl delete services service_name
 
 
 
