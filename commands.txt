@@ -9,7 +9,17 @@
 
 # Apply the configuration file in kubernetes to create a deployment Pod:
         kubectl apply -f event-bus-depl.yaml
+        //where event-bus-depl.yaml is a config file for kubernetes in infra folder
 
 #Check all the pods: 
         kubectl get pods
+#Check all the services
+        kubectl get services
 
+
+
+
+
+
+
+Note: To create multiple objects in a single yaml file we write ---
