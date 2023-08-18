@@ -1,0 +1,15 @@
+======================= Docker Commands ======================
+#Build docker image :
+         docker build -t shujashah/event-bus .
+#Push the docker image :
+         docker push shujashah/event-bus
+
+
+====================== Kubernetes Commands =====================
+
+# Apply the configuration file in kubernetes to create a deployment Pod:
+        kubectl apply -f event-bus-depl.yaml
+
+#Check all the pods: 
+        kubectl get pods
+
