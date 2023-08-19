@@ -17,9 +17,15 @@
 #Check all the services:
         kubectl get services
 
+#Check all the deployments:
+        kubectl get deployments
+
+#To restart the deployments:
+        kubectl rollout restart deployment deployment_name
+
 #Delete the pod:
         kubectl delete pod_name
-        
+
 #Delete the service:
         kubectl delete services service_name
 
