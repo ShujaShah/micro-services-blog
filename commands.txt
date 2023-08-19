@@ -23,6 +23,9 @@
 #To restart the deployments:
         kubectl rollout restart deployment deployment_name
 
+#To get the logs of the pod
+        kubectl logs pod_name
+
 #Delete the pod:
         kubectl delete pod_name
 
