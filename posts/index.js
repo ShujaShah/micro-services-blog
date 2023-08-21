@@ -13,7 +13,7 @@ app.use(cors());
 const posts = {};
 
 //Route to get all the posts
-app.get("/posts", (req, res) => {
+app.get("/posts/create", (req, res) => {
   res.send(posts);
 });
 
