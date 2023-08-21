@@ -34,7 +34,19 @@
 
 
 
+## To install ingress
+use the command : 
+        kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.1/deploy/static/provider/cloud/deploy.yaml 
 
+
+
+###Code to edit the hosts file in mac
+
+1. open terminal and write the command sudo nano /etc/hosts
+2. This will open the nano file editor editing the hosts file
+3. Write the command at the bottom of the file like 127.0.0.1 posts.com
+4. To overwrite the existing file, use the shortcut ctrl + 0, followed by enter/ return key
+5. To exit the process use ctrl + x
 
 
 
