@@ -40,6 +40,11 @@ use the command :
 
 
 
+##To run skaffold
+use the command:
+        skaffold dev
+
+
 ###Code to edit the hosts file in mac
 
 1. open terminal and write the command sudo nano /etc/hosts
