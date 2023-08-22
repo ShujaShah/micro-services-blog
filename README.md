@@ -1,5 +1,9 @@
 # micro-services-blog
 
+======To run this app=======
+
+run : skaffold dev
+
 ======================= Docker Commands ======================
 #Build docker image :
 docker build -t shujashah/event-bus .
