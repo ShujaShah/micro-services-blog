@@ -43,6 +43,9 @@ kubectl delete services service_name
 use the command :
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.1/deploy/static/provider/cloud/deploy.yaml
 
+##To connect to mongodb compass through port forwarding:
+kubectl port-forward pod_name 27017:27017
+
 #To run Skaffold
 use the command:
 skaffold dev
