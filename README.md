@@ -59,3 +59,6 @@ skaffold dev
 5. To exit the process use ctrl + x
 
 Note: To create multiple objects in a single yaml file we write ---
+
+###To Directly Bypass the Security warning on chrome:
+type in the keyboard: thisisunsafe
